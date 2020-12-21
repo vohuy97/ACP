@@ -64,6 +64,10 @@
 		43223651259113E40040CF7C /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4322364A259113E40040CF7C /* NewsViewController.xib */; };
 		43223652259113E40040CF7C /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4322364E259113E40040CF7C /* NewsTableViewCell.m */; };
 		43223653259113E40040CF7C /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4322364F259113E40040CF7C /* NewsTableViewCell.xib */; };
+		4322365C259115890040CF7C /* PatientStatisticViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43223656259115890040CF7C /* PatientStatisticViewController.xib */; };
+		4322365D259115890040CF7C /* StatisticTableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43223658259115890040CF7C /* StatisticTableTableViewCell.m */; };
+		4322365E259115890040CF7C /* StatisticTableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4322365A259115890040CF7C /* StatisticTableTableViewCell.xib */; };
+		4322365F259115890040CF7C /* PatientStatisticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4322365B259115890040CF7C /* PatientStatisticViewController.m */; };
 		432BD8D523ED17AD0066F4DE /* Group 831@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 432BD8C623ED17AC0066F4DE /* Group 831@2x.png */; };
 		432BD8D723ED17AD0066F4DE /* Group 832@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 432BD8C723ED17AC0066F4DE /* Group 832@2x.png */; };
 		432BD8D923ED17AD0066F4DE /* Group 829.png in Resources */ = {isa = PBXBuildFile; fileRef = 432BD8C823ED17AC0066F4DE /* Group 829.png */; };
@@ -312,6 +316,12 @@
 		4322364D259113E40040CF7C /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
 		4322364E259113E40040CF7C /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 		4322364F259113E40040CF7C /* NewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		43223655259115890040CF7C /* PatientStatisticViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientStatisticViewController.h; sourceTree = "<group>"; };
+		43223656259115890040CF7C /* PatientStatisticViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientStatisticViewController.xib; sourceTree = "<group>"; };
+		43223658259115890040CF7C /* StatisticTableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticTableTableViewCell.m; sourceTree = "<group>"; };
+		43223659259115890040CF7C /* StatisticTableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticTableTableViewCell.h; sourceTree = "<group>"; };
+		4322365A259115890040CF7C /* StatisticTableTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticTableTableViewCell.xib; sourceTree = "<group>"; };
+		4322365B259115890040CF7C /* PatientStatisticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientStatisticViewController.m; sourceTree = "<group>"; };
 		432BD8C623ED17AC0066F4DE /* Group 831@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 831@2x.png"; sourceTree = "<group>"; };
 		432BD8C723ED17AC0066F4DE /* Group 832@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 832@2x.png"; sourceTree = "<group>"; };
 		432BD8C823ED17AC0066F4DE /* Group 829.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 829.png"; sourceTree = "<group>"; };
@@ -635,6 +645,27 @@
 			path = NewsTable;
 			sourceTree = "<group>";
 		};
+		43223654259115890040CF7C /* PatientStatisticViewController */ = {
+			isa = PBXGroup;
+			children = (
+				43223655259115890040CF7C /* PatientStatisticViewController.h */,
+				43223656259115890040CF7C /* PatientStatisticViewController.xib */,
+				4322365B259115890040CF7C /* PatientStatisticViewController.m */,
+				43223657259115890040CF7C /* StatisticTable */,
+			);
+			path = PatientStatisticViewController;
+			sourceTree = "<group>";
+		};
+		43223657259115890040CF7C /* StatisticTable */ = {
+			isa = PBXGroup;
+			children = (
+				43223658259115890040CF7C /* StatisticTableTableViewCell.m */,
+				43223659259115890040CF7C /* StatisticTableTableViewCell.h */,
+				4322365A259115890040CF7C /* StatisticTableTableViewCell.xib */,
+			);
+			path = StatisticTable;
+			sourceTree = "<group>";
+		};
 		432BD8C523ED17730066F4DE /* MyCard */ = {
 			isa = PBXGroup;
 			children = (
@@ -950,6 +981,7 @@
 		43F037FA23CC140300D16CCA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				43223654259115890040CF7C /* PatientStatisticViewController */,
 				43223648259113E40040CF7C /* NewsViewController */,
 				432236452591126D0040CF7C /* MapTotalViewController.h */,
 				432236432591126C0040CF7C /* MapTotalViewController.m */,
@@ -1189,6 +1221,7 @@
 				4338B1FA23EAD5D900C3F623 /* pint.png in Resources */,
 				43223651259113E40040CF7C /* NewsViewController.xib in Resources */,
 				4338B1C623EAD5D800C3F623 /* Group 823@3x.png in Resources */,
+				4322365C259115890040CF7C /* PatientStatisticViewController.xib in Resources */,
 				43537A092459364900A4437A /* icons8-dragon-50.png in Resources */,
 				4308618223D80B3D000CAE1E /* icons-back@2x.png in Resources */,
 				432BD8F123ED17AD0066F4DE /* bg@3x.png in Resources */,
@@ -1249,6 +1282,7 @@
 				43A0F27523FF76ED00549F7B /* mycard1@3x.png in Resources */,
 				433054B423D5457A0082B771 /* hoa_vang.png in Resources */,
 				433054A823D5457A0082B771 /* son_tra@3x.png in Resources */,
+				4322365E259115890040CF7C /* StatisticTableTableViewCell.xib in Resources */,
 				43A0420C23D0061200DFD949 /* welcome_da_nang.png in Resources */,
 				43961DF32543266300C3D9B5 /* imgPhongNguaCovid19.jpg in Resources */,
 				4338B1E423EAD5D800C3F623 /* icons8-buying-64@2x.png in Resources */,
@@ -1339,6 +1373,7 @@
 			files = (
 				43A041F423CF1F9500DFD949 /* MDMatrix.m in Sources */,
 				43D964F823E432D5007DCDD0 /* NavigationBottom.m in Sources */,
+				4322365D259115890040CF7C /* StatisticTableTableViewCell.m in Sources */,
 				43C3CF40257CDC1E00614E88 /* SpinnerView.m in Sources */,
 				4343E36624614E5E0010BD4F /* DrawerMenu.m in Sources */,
 				432236462591126D0040CF7C /* MapTotalViewController.m in Sources */,
@@ -1350,6 +1385,7 @@
 				434B2F4023EC028000A8CE44 /* NavigationTop.m in Sources */,
 				43F037D723CC13C700D16CCA /* AppDelegate.m in Sources */,
 				43D6F570248604A300D0EE9C /* Utils.m in Sources */,
+				4322365F259115890040CF7C /* PatientStatisticViewController.m in Sources */,
 				4313CC332535939B00886D83 /* APIClients.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
