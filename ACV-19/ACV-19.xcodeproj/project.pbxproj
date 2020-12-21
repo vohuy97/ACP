@@ -60,6 +60,10 @@
 		4313CC3725359A2D00886D83 /* icons8-octagon-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 4313CC3625359A2D00886D83 /* icons8-octagon-24.png */; };
 		432236462591126D0040CF7C /* MapTotalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 432236432591126C0040CF7C /* MapTotalViewController.m */; };
 		432236472591126D0040CF7C /* MapTotalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432236442591126C0040CF7C /* MapTotalViewController.xib */; };
+		43223650259113E40040CF7C /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43223649259113E40040CF7C /* NewsViewController.m */; };
+		43223651259113E40040CF7C /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4322364A259113E40040CF7C /* NewsViewController.xib */; };
+		43223652259113E40040CF7C /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4322364E259113E40040CF7C /* NewsTableViewCell.m */; };
+		43223653259113E40040CF7C /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4322364F259113E40040CF7C /* NewsTableViewCell.xib */; };
 		432BD8D523ED17AD0066F4DE /* Group 831@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 432BD8C623ED17AC0066F4DE /* Group 831@2x.png */; };
 		432BD8D723ED17AD0066F4DE /* Group 832@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 432BD8C723ED17AC0066F4DE /* Group 832@2x.png */; };
 		432BD8D923ED17AD0066F4DE /* Group 829.png in Resources */ = {isa = PBXBuildFile; fileRef = 432BD8C823ED17AC0066F4DE /* Group 829.png */; };
@@ -302,6 +306,12 @@
 		432236432591126C0040CF7C /* MapTotalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapTotalViewController.m; path = ShowMapController/TotalMap/MapTotalViewController.m; sourceTree = "<group>"; };
 		432236442591126C0040CF7C /* MapTotalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapTotalViewController.xib; path = ShowMapController/TotalMap/MapTotalViewController.xib; sourceTree = "<group>"; };
 		432236452591126D0040CF7C /* MapTotalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapTotalViewController.h; path = ShowMapController/TotalMap/MapTotalViewController.h; sourceTree = "<group>"; };
+		43223649259113E40040CF7C /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		4322364A259113E40040CF7C /* NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
+		4322364B259113E40040CF7C /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		4322364D259113E40040CF7C /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		4322364E259113E40040CF7C /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		4322364F259113E40040CF7C /* NewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		432BD8C623ED17AC0066F4DE /* Group 831@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 831@2x.png"; sourceTree = "<group>"; };
 		432BD8C723ED17AC0066F4DE /* Group 832@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 832@2x.png"; sourceTree = "<group>"; };
 		432BD8C823ED17AC0066F4DE /* Group 829.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 829.png"; sourceTree = "<group>"; };
@@ -602,6 +612,27 @@
 				4313CC352535942100886D83 /* API.h */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		43223648259113E40040CF7C /* NewsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				43223649259113E40040CF7C /* NewsViewController.m */,
+				4322364A259113E40040CF7C /* NewsViewController.xib */,
+				4322364B259113E40040CF7C /* NewsViewController.h */,
+				4322364C259113E40040CF7C /* NewsTable */,
+			);
+			path = NewsViewController;
+			sourceTree = "<group>";
+		};
+		4322364C259113E40040CF7C /* NewsTable */ = {
+			isa = PBXGroup;
+			children = (
+				4322364D259113E40040CF7C /* NewsTableViewCell.h */,
+				4322364E259113E40040CF7C /* NewsTableViewCell.m */,
+				4322364F259113E40040CF7C /* NewsTableViewCell.xib */,
+			);
+			path = NewsTable;
 			sourceTree = "<group>";
 		};
 		432BD8C523ED17730066F4DE /* MyCard */ = {
@@ -919,6 +950,7 @@
 		43F037FA23CC140300D16CCA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				43223648259113E40040CF7C /* NewsViewController */,
 				432236452591126D0040CF7C /* MapTotalViewController.h */,
 				432236432591126C0040CF7C /* MapTotalViewController.m */,
 				432236442591126C0040CF7C /* MapTotalViewController.xib */,
@@ -1155,6 +1187,7 @@
 				43EF773E24811A6900650418 /* icons-light-share@2x.png in Resources */,
 				43A0F27823FF76ED00549F7B /* mycard@2x.png in Resources */,
 				4338B1FA23EAD5D900C3F623 /* pint.png in Resources */,
+				43223651259113E40040CF7C /* NewsViewController.xib in Resources */,
 				4338B1C623EAD5D800C3F623 /* Group 823@3x.png in Resources */,
 				43537A092459364900A4437A /* icons8-dragon-50.png in Resources */,
 				4308618223D80B3D000CAE1E /* icons-back@2x.png in Resources */,
@@ -1241,6 +1274,7 @@
 				430861A823D80B3D000CAE1E /* Group 777@2x.png in Resources */,
 				43F037DD23CC13C700D16CCA /* Main.storyboard in Resources */,
 				43EF773D24811A6900650418 /* mycard_open@3x.png in Resources */,
+				43223653259113E40040CF7C /* NewsTableViewCell.xib in Resources */,
 				43A0F28523FF76ED00549F7B /* home@2x.png in Resources */,
 				432BD8ED23ED17AD0066F4DE /* Group 829@2x.png in Resources */,
 				43E0980F2585C8C6004DE8BD /* bar-chart.png in Resources */,
@@ -1309,6 +1343,8 @@
 				4343E36624614E5E0010BD4F /* DrawerMenu.m in Sources */,
 				432236462591126D0040CF7C /* MapTotalViewController.m in Sources */,
 				43A041F523CF1F9500DFD949 /* MDScratchImageView.mm in Sources */,
+				43223652259113E40040CF7C /* NewsTableViewCell.m in Sources */,
+				43223650259113E40040CF7C /* NewsViewController.m in Sources */,
 				43F037E523CC13C900D16CCA /* main.m in Sources */,
 				43C3CF41257CDC1E00614E88 /* Pose.m in Sources */,
 				434B2F4023EC028000A8CE44 /* NavigationTop.m in Sources */,
