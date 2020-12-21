@@ -70,6 +70,10 @@
 		4322365F259115890040CF7C /* PatientStatisticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4322365B259115890040CF7C /* PatientStatisticViewController.m */; };
 		432236642591168B0040CF7C /* InstructionsForPreventionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432236622591168B0040CF7C /* InstructionsForPreventionViewController.xib */; };
 		432236652591168B0040CF7C /* InstructionsForPreventionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 432236632591168B0040CF7C /* InstructionsForPreventionViewController.m */; };
+		4322366E259117A90040CF7C /* GovernmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4322366A259117A90040CF7C /* GovernmentTableViewCell.xib */; };
+		4322366F259117A90040CF7C /* GovernmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4322366B259117A90040CF7C /* GovernmentTableViewCell.m */; };
+		43223670259117A90040CF7C /* GovernmentDirectiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4322366C259117A90040CF7C /* GovernmentDirectiveViewController.m */; };
+		43223671259117A90040CF7C /* GovernmentDirectiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4322366D259117A90040CF7C /* GovernmentDirectiveViewController.xib */; };
 		432BD8D523ED17AD0066F4DE /* Group 831@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 432BD8C623ED17AC0066F4DE /* Group 831@2x.png */; };
 		432BD8D723ED17AD0066F4DE /* Group 832@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 432BD8C723ED17AC0066F4DE /* Group 832@2x.png */; };
 		432BD8D923ED17AD0066F4DE /* Group 829.png in Resources */ = {isa = PBXBuildFile; fileRef = 432BD8C823ED17AC0066F4DE /* Group 829.png */; };
@@ -327,6 +331,12 @@
 		432236612591168B0040CF7C /* InstructionsForPreventionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsForPreventionViewController.h; sourceTree = "<group>"; };
 		432236622591168B0040CF7C /* InstructionsForPreventionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstructionsForPreventionViewController.xib; sourceTree = "<group>"; };
 		432236632591168B0040CF7C /* InstructionsForPreventionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsForPreventionViewController.m; sourceTree = "<group>"; };
+		43223667259117A90040CF7C /* GovernmentDirectiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GovernmentDirectiveViewController.h; sourceTree = "<group>"; };
+		43223669259117A90040CF7C /* GovernmentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GovernmentTableViewCell.h; sourceTree = "<group>"; };
+		4322366A259117A90040CF7C /* GovernmentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GovernmentTableViewCell.xib; sourceTree = "<group>"; };
+		4322366B259117A90040CF7C /* GovernmentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GovernmentTableViewCell.m; sourceTree = "<group>"; };
+		4322366C259117A90040CF7C /* GovernmentDirectiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GovernmentDirectiveViewController.m; sourceTree = "<group>"; };
+		4322366D259117A90040CF7C /* GovernmentDirectiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GovernmentDirectiveViewController.xib; sourceTree = "<group>"; };
 		432BD8C623ED17AC0066F4DE /* Group 831@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 831@2x.png"; sourceTree = "<group>"; };
 		432BD8C723ED17AC0066F4DE /* Group 832@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 832@2x.png"; sourceTree = "<group>"; };
 		432BD8C823ED17AC0066F4DE /* Group 829.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 829.png"; sourceTree = "<group>"; };
@@ -681,6 +691,27 @@
 			path = InstructionsForPreventionController;
 			sourceTree = "<group>";
 		};
+		43223666259117A90040CF7C /* GovernmentDirective */ = {
+			isa = PBXGroup;
+			children = (
+				43223668259117A90040CF7C /* Table */,
+				43223667259117A90040CF7C /* GovernmentDirectiveViewController.h */,
+				4322366C259117A90040CF7C /* GovernmentDirectiveViewController.m */,
+				4322366D259117A90040CF7C /* GovernmentDirectiveViewController.xib */,
+			);
+			path = GovernmentDirective;
+			sourceTree = "<group>";
+		};
+		43223668259117A90040CF7C /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				43223669259117A90040CF7C /* GovernmentTableViewCell.h */,
+				4322366A259117A90040CF7C /* GovernmentTableViewCell.xib */,
+				4322366B259117A90040CF7C /* GovernmentTableViewCell.m */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
 		432BD8C523ED17730066F4DE /* MyCard */ = {
 			isa = PBXGroup;
 			children = (
@@ -996,6 +1027,7 @@
 		43F037FA23CC140300D16CCA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				43223666259117A90040CF7C /* GovernmentDirective */,
 				432236602591168B0040CF7C /* InstructionsForPreventionController */,
 				43223654259115890040CF7C /* PatientStatisticViewController */,
 				43223648259113E40040CF7C /* NewsViewController */,
@@ -1203,9 +1235,11 @@
 				430BBCDC246564360011A4A7 /* contact Us.png in Resources */,
 				43351A20246A8D0F0076DF39 /* CauRong@2x.png in Resources */,
 				43351A1A246A8CD10076DF39 /* LogoMap@3x.png in Resources */,
+				43223671259117A90040CF7C /* GovernmentDirectiveViewController.xib in Resources */,
 				4308619E23D80B3D000CAE1E /* Group 636@2x.png in Resources */,
 				4338B1CE23EAD5D800C3F623 /* Group 667@3x.png in Resources */,
 				43C3CF5B257CE3DC00614E88 /* Logo-20.png in Resources */,
+				4322366E259117A90040CF7C /* GovernmentTableViewCell.xib in Resources */,
 				4338268825432BA000BEA74E /* btn_map_plus_f@3x.png in Resources */,
 				4330549823D5457A0082B771 /* thanh_khe.png in Resources */,
 				43351A26246A8E350076DF39 /* favorite_unSelect@3x.png in Resources */,
@@ -1390,6 +1424,7 @@
 			files = (
 				43A041F423CF1F9500DFD949 /* MDMatrix.m in Sources */,
 				43D964F823E432D5007DCDD0 /* NavigationBottom.m in Sources */,
+				4322366F259117A90040CF7C /* GovernmentTableViewCell.m in Sources */,
 				4322365D259115890040CF7C /* StatisticTableTableViewCell.m in Sources */,
 				43C3CF40257CDC1E00614E88 /* SpinnerView.m in Sources */,
 				4343E36624614E5E0010BD4F /* DrawerMenu.m in Sources */,
@@ -1399,6 +1434,7 @@
 				432236652591168B0040CF7C /* InstructionsForPreventionViewController.m in Sources */,
 				43223650259113E40040CF7C /* NewsViewController.m in Sources */,
 				43F037E523CC13C900D16CCA /* main.m in Sources */,
+				43223670259117A90040CF7C /* GovernmentDirectiveViewController.m in Sources */,
 				43C3CF41257CDC1E00614E88 /* Pose.m in Sources */,
 				434B2F4023EC028000A8CE44 /* NavigationTop.m in Sources */,
 				43F037D723CC13C700D16CCA /* AppDelegate.m in Sources */,
