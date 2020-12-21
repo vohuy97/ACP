@@ -1,0 +1,35 @@
+PODS:
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - GoogleMaps (3.7.0):
+    - GoogleMaps/Maps (= 3.7.0)
+  - GoogleMaps/Base (3.7.0)
+  - GoogleMaps/Maps (3.7.0):
+    - GoogleMaps/Base
+  - GooglePlaces (3.7.0):
+    - GoogleMaps/Base (= 3.7.0)
+
+DEPENDENCIES:
+  - AFNetworking/NSURLSession (= 4.0.1)
+  - GoogleMaps
+  - GooglePlaces
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - GoogleMaps
+    - GooglePlaces
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  GoogleMaps: 55da829c68aa931f3ae982b9e341cc2f3d89c587
+  GooglePlaces: a62077320f9d64239245af63aa1aa136393ebeb6
+
+PODFILE CHECKSUM: 58d1bc4843777fd3b02eb569386df998b7caddda
+
+COCOAPODS: 1.9.3

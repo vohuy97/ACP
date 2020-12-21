@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NavigationBottom">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1t-8e-8m4">
+                    <rect key="frame" x="25.000000000000007" y="17" width="103.66666666666669" height="67.333333333333329"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="-11" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Home" image="home.png">
+                        <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkG-9b-Tts">
+                    <rect key="frame" x="155.33333333333334" y="17" width="103.33333333333334" height="67.333333333333329"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="-7" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Discover" image="discover.png">
+                        <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIh-Yr-gi1">
+                    <rect key="frame" x="285.66666666666669" y="17" width="103.33333333333331" height="67.333333333333329"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="-7" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="My card" image="mycard.png">
+                        <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="A1t-8e-8m4" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1/4" id="49v-OA-2Ih"/>
+                <constraint firstItem="lkG-9b-Tts" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="8SU-XL-MHx"/>
+                <constraint firstItem="lkG-9b-Tts" firstAttribute="width" secondItem="A1t-8e-8m4" secondAttribute="width" id="IRc-UC-KX9"/>
+                <constraint firstItem="A1t-8e-8m4" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Ng0-hU-vnt"/>
+                <constraint firstItem="aIh-Yr-gi1" firstAttribute="width" secondItem="A1t-8e-8m4" secondAttribute="width" id="QLV-Tx-UlE"/>
+                <constraint firstItem="A1t-8e-8m4" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="2/3" id="fm4-bh-YyK"/>
+                <constraint firstItem="lkG-9b-Tts" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="fqu-Fg-I7v"/>
+                <constraint firstItem="A1t-8e-8m4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="gXZ-ow-wLq"/>
+                <constraint firstItem="lkG-9b-Tts" firstAttribute="height" secondItem="A1t-8e-8m4" secondAttribute="height" id="j74-l0-dAU"/>
+                <constraint firstItem="aIh-Yr-gi1" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="op5-lJ-HcZ"/>
+                <constraint firstItem="aIh-Yr-gi1" firstAttribute="height" secondItem="A1t-8e-8m4" secondAttribute="height" id="ua3-PW-wWg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aIh-Yr-gi1" secondAttribute="trailing" constant="25" id="zZJ-Pa-fKx"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="discoverBtn" destination="lkG-9b-Tts" id="FZc-DH-NH3"/>
+                <outlet property="homeBtn" destination="A1t-8e-8m4" id="aZH-D4-vhk"/>
+                <outlet property="myCardBtn" destination="aIh-Yr-gi1" id="z9e-Pf-EpJ"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="-168.34239130434784"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="discover.png" width="18.333333969116211" height="17.333333969116211"/>
+        <image name="home.png" width="20" height="20"/>
+        <image name="mycard.png" width="18" height="14"/>
+    </resources>
+</document>
