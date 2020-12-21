@@ -8,18 +8,15 @@
 
 #import "MapTotalViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
-#import "MDScratchImageView.h"
 #import "AppDelegate.h"
 #import "NavigationTop.h"
 #import "NavigationBottom.h"
 #import "Constains.h"
-#import "DiscoverViewController.h"
-#import "MyCardViewController.h"
 #import "DrawerMenu.h"
 #import "Utils.h"
 #import "APIClients.h"
 
-@interface MapTotalViewController () <MDScratchImageViewDelegate, GMSMapViewDelegate> {
+@interface MapTotalViewController () <GMSMapViewDelegate> {
     UIWindow *window;
     UIScrollView *scretchImageView;
     UIButton *checkinBtn;
@@ -31,7 +28,6 @@
     GMSGroundOverlay *anGiang , *baRiaVungTau , *bacKan , *bacLieu , *bacNinh , *benTre , *binhDinh , *binhDuong , *binhPhuoc , *binhthuan , *bacGiang , *caMau , *caoBang , *dakLak , *dakNong , *dienBien , *dongNai , *dongThap , *giaLai , *haGiang , *haNam , *haTinh , *haiDuong , *hauGiang , *hoaBinh , *hungYen , *khanhHoa , *kienGiang , *konTum , *laiChau , *lamDong , *langSon , *laoCai , *longAn , *namDinh , *ngheAn , *ninhBinh , *ninhThuan , *binhThuan , *phuTho , *quangBinh , *quangNam , *quangNgai , *quangTri , *quangNinh , *socTrang , *sonLa , *tayNinh , *thaiBinh , *thaiNguyen , *thanhHoa , *thuaThienHue , *tienGiang , *traVinh , *tuyenGiang , *vinhLong , *vinhPhuc , *yenBai , *phuYen , *canTho , *daNang , *haiPhong , *haNoi , *tpHCM , *daoPhuQuoc , *daoHoangSa , *daoTruongSa , *conDao;
     NSMutableArray *overlayArr;
     int positionDaNangInArr;
-    MDScratchImageView *scratchImageView;
     NavigationBottom *navCustom;
     float positionYOfNAVBottom;
     int curentZoom;
@@ -52,14 +48,14 @@
     window = [[UIApplication sharedApplication] keyWindow];
     [self loadMap];
     navCustom = [NavigationBottom customView];
-    [NavigationTop initNavigationItemsTopWithTitle:@"CPA-19" leftImageName:@"Icon.png" leftAction:@selector(navigationActionLeft) rightImageName:@"" rightAction:nil atView:self];
+    [NavigationTop initNavigationItemsTopWithTitle:@"CPA" leftImageName:@"Icon.png" leftAction:@selector(navigationActionLeft) rightImageName:@"" rightAction:nil atView:self];
 //    [NavigationBottom initNavigationBottom:navCustom positonY:positionYOfNAVBottom actionHome:nil actionDiscover:@selector(discoverBtn) actionMyCard:@selector(myCardBtn) view:self];
 //    [self initBtnCheckin];
     [DrawerMenu initDrawerMenu];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [NavigationTop initNavigationItemsTopWithTitle:@"CPA-19" leftImageName:@"Icon.png" leftAction:@selector(navigationActionLeft) rightImageName:@"" rightAction:nil atView:self];
+    [NavigationTop initNavigationItemsTopWithTitle:@"CPA" leftImageName:@"Icon.png" leftAction:@selector(navigationActionLeft) rightImageName:@"" rightAction:nil atView:self];
 
     [[AppDelegate sharedInstance] startUpdatingLocation];
 }
@@ -81,7 +77,10 @@
                                                             longitude:108.204839
                                                                  zoom:5.5];
     mapView = [GMSMapView mapWithFrame:_viewTotal.bounds camera:camera];
-    mapView.myLocationEnabled = NO;
+    mapView.myLocationEnabled = YES;
+    float latitude = [[AppDelegate sharedInstance]getLatitude];
+    float longtitude= [[AppDelegate sharedInstance]getLongitude];
+    CLLocationCoordinate2D position = CLLocationCoordinate2DMake(latitude, longtitude);
     mapView.settings.myLocationButton = NO;
     [mapView setMinZoom:3 maxZoom:15];
     curentZoom = 5.5;
@@ -121,52 +120,6 @@
     marker.map = mapView;
 }
 
-- (void)initBtnCheckin {
-    checkinBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [checkinBtn addTarget:self
-               action:@selector(checkin)
-     forControlEvents:UIControlEventTouchUpInside];
-    [checkinBtn setTitle:@"Check in" forState:UIControlStateNormal];
-    [checkinBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    float positionX = SCREEN_WIDTH/2 - (SCREEN_WIDTH -40)/2;
-    float positionY = positionYOfNAVBottom - 60;
-    checkinBtn.layer.cornerRadius = 20;
-    checkinBtn.frame = CGRectMake(positionX, positionY, SCREEN_WIDTH - 40, 45);
-    [checkinBtn setBackgroundColor:[UIColor redColor]];
-    [window addSubview:checkinBtn];
-}
-
-- (void)initBtnGoAndShare {
-    float sizeWidthBtn = checkinBtn.frame.size.width*2/5;
-    // go btn
-    goBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [goBtn addTarget:self
-               action:@selector(imageZoomOut)
-     forControlEvents:UIControlEventTouchUpInside];
-    [goBtn setTitle:@"GO" forState:UIControlStateNormal];
-    [goBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    float positionX = checkinBtn.frame.origin.x + checkinBtn.frame.size.width - sizeWidthBtn - 10;
-    float positionY = checkinBtn.frame.origin.y - 80;
-    goBtn.layer.cornerRadius = 20;
-    goBtn.frame = CGRectMake(positionX, positionY, sizeWidthBtn , 40.0);
-    [goBtn setBackgroundColor:[UIColor redColor]];
-    [window addSubview:goBtn];
-
-    //share btn
-    shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [shareBtn addTarget:self
-              action:@selector(shareBtn)
-    forControlEvents:UIControlEventTouchUpInside];
-    [shareBtn setTitle:@"SHARE" forState:UIControlStateNormal];
-    [shareBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-    positionX = checkinBtn.frame.origin.x + 10;
-    positionY = checkinBtn.frame.origin.y - 80;
-    shareBtn.layer.cornerRadius = 20;
-    shareBtn.frame = CGRectMake(positionX, positionY, sizeWidthBtn, 40.0);
-    [shareBtn setBackgroundColor:[UIColor whiteColor]];
-    [window addSubview:shareBtn];
-}
-
 - (void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
@@ -194,15 +147,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         zoomLevel = 5.68;
     }
     return zoomLevel;
-}
-
-- (void)mdScratchImageView:(MDScratchImageView *)scratchImageView didChangeMaskingProgress:(CGFloat)maskingProgress {
-    NSLog(@"%s %p progress == %f", __PRETTY_FUNCTION__, scratchImageView, maskingProgress);
-    if (maskingProgress == 0.937500) {
-        scratchImageView.hidden = YES;
-        [self animationUnderImage];
-        [self initBtnGoAndShare];
-    }
 }
 
 - (void)animationUnderImage {
@@ -268,66 +212,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 
 - (void)navigationActionLeft {
     [DrawerMenu showDrawerMenu];
-}
-
-- (void)discoverBtn {
-    [checkinBtn removeFromSuperview];
-    [navCustom removeFromSuperview];
-    DiscoverViewController *discoverVC = [[DiscoverViewController alloc]init];
-    [self.navigationController pushViewController:discoverVC animated:NO];
-}
-
-- (void)myCardBtn {
-    [checkinBtn removeFromSuperview];
-    [navCustom removeFromSuperview];
-    MyCardViewController *myCardVC = [[MyCardViewController alloc]init];
-    [self.navigationController pushViewController:myCardVC animated:NO];
-}
-
-- (void)checkin {
-    scretchImageView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    scretchImageView.contentInset = UIEdgeInsetsMake([[UIApplication sharedApplication] statusBarFrame].size.height, 0.0f, 0.0f, 0.0f);
-    scretchImageView.canCancelContentTouches = NO;
-    scretchImageView.delaysContentTouches = NO;
-    background = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, window.frame.size.height)];
-    [background setBackgroundColor:[UIColor grayColor]];
-    background.alpha = 0.5;
-    [window addSubview:background];
-    [window addSubview:scretchImageView];
-
-    NSArray *imagesDicts = @[ @{@"sharp" : @"welcome_da_nang.png", @"blured" : @"scratch_here.png"}];
-
-    UIImage *image = [UIImage imageNamed:@"scratch_here.png"];
-    CGFloat step = SCREEN_HEIGHT/2 - image.size.height/2;
-    CGFloat currentY = step;
-    for (NSDictionary *dictionary in imagesDicts) {
-        UIImage *sharpImage = [UIImage imageNamed:[dictionary objectForKey:@"sharp"]];
-
-        CGFloat width = MIN(floorf(scretchImageView.bounds.size.width * 0.6f), sharpImage.size.width);
-        CGFloat height = sharpImage.size.height * (width / sharpImage.size.width);
-
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(floorf(scretchImageView.bounds.size.width * 0.5f - width * 0.5f), currentY, width, height)];
-        imageView.image = sharpImage;
-        [scretchImageView addSubview:imageView];
-
-        UIImage *scratchImg = [UIImage imageNamed:[dictionary objectForKey:@"blured"]];
-        NSString *radiusString = [dictionary objectForKey:@"radius"];
-        scratchImageView = [[MDScratchImageView alloc] initWithFrame:imageView.frame];
-        scratchImageView.delegate = self;
-        if (nil == radiusString) {
-            scratchImageView.image = scratchImg;
-        } else {
-            [scratchImageView setImage:scratchImg radius:[radiusString intValue]];
-            scratchImageView.image = scratchImg;
-        }
-        [scretchImageView addSubview:scratchImageView];
-
-        currentY = CGRectGetMaxY(imageView.frame) + step;
-        [self imageUpZoomIn];
-    }
-    scretchImageView.contentSize = CGSizeMake(scretchImageView.bounds.size.width, currentY);
-    [window bringSubviewToFront:scretchImageView];
-
 }
 
 - (void)imageZoomOut {

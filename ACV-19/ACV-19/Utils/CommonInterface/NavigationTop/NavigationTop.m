@@ -60,7 +60,7 @@ UIView *statusBarView;
         view.navigationItem.rightBarButtonItem = rightItem;
     }
     
-    if ([title isEqualToString:@"CPA-19"]) {
+    if ([title isEqualToString:@"CPA"]) {
         view.navigationController.navigationBar.tintColor = [UIColor clearColor];
         view.navigationController.navigationBar.barTintColor = [UIColor clearColor];
         view.navigationController.navigationBar.backgroundColor = [UIColor clearColor];

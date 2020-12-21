@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MapTotalViewController.h"
 #import <CoreLocation/CoreLocation.h>
-#import "DiscoverViewController.h"
-#import "MyCardViewController.h"
 @import UserNotifications;
 @import GoogleMaps;
 
@@ -21,8 +19,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) MapTotalViewController *MapTotalVC;
-@property (strong, nonatomic) DiscoverViewController *discoverVC;
-@property (strong, nonatomic) MyCardViewController *myCardVC;
 
 + (instancetype)sharedInstance;
 - (void)startUpdatingLocation;
