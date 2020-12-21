@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17124"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="202" id="KGk-i7-Jjw" customClass="NewsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="496" height="202"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="496" height="202"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khách sạn nâng cao phòng chống covid-19 Khách sạn nâng cao phòng chống covid-19" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxg-lr-QfJ">
+                        <rect key="frame" x="10" y="10" width="476" height="41"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="hinhtintuc.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DWd-DC-Qkj">
+                        <rect key="frame" x="10" y="61" width="173.5" height="131"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07/11/2020 20:56" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiM-q4-JKa">
+                        <rect key="frame" x="193.5" y="61" width="292.5" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14.5" id="2ri-zL-ahZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vtc - cách phòng tránh tốt cho những người muốn thuê khách sạn" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2L-fn-SlO">
+                        <rect key="frame" x="193.5" y="85.5" width="272.5" height="105.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gM-Oq-Y10">
+                        <rect key="frame" x="15" y="201" width="466" height="1"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="4wZ-Sd-pAR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="C2L-fn-SlO" firstAttribute="top" secondItem="AiM-q4-JKa" secondAttribute="bottom" constant="10" id="0dM-MN-phQ"/>
+                    <constraint firstAttribute="trailing" secondItem="1gM-Oq-Y10" secondAttribute="trailing" constant="15" id="2J0-hI-RBp"/>
+                    <constraint firstAttribute="bottom" secondItem="DWd-DC-Qkj" secondAttribute="bottom" constant="10" id="3AI-wC-9O2"/>
+                    <constraint firstItem="1gM-Oq-Y10" firstAttribute="top" secondItem="C2L-fn-SlO" secondAttribute="bottom" constant="10" id="3hJ-ve-nF6"/>
+                    <constraint firstItem="AiM-q4-JKa" firstAttribute="leading" secondItem="DWd-DC-Qkj" secondAttribute="trailing" constant="10" id="62D-IG-oXB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="C2L-fn-SlO" secondAttribute="trailing" constant="10" id="HSM-L1-xzZ"/>
+                    <constraint firstItem="rxg-lr-QfJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="IwI-bR-7M6"/>
+                    <constraint firstItem="1gM-Oq-Y10" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="JDY-XV-fqu"/>
+                    <constraint firstAttribute="bottom" secondItem="1gM-Oq-Y10" secondAttribute="bottom" id="LIE-Wr-vWW"/>
+                    <constraint firstItem="AiM-q4-JKa" firstAttribute="top" secondItem="rxg-lr-QfJ" secondAttribute="bottom" constant="10" id="RrS-wV-Xt4"/>
+                    <constraint firstItem="C2L-fn-SlO" firstAttribute="leading" secondItem="DWd-DC-Qkj" secondAttribute="trailing" constant="10" id="YBU-tK-oof"/>
+                    <constraint firstItem="DWd-DC-Qkj" firstAttribute="top" secondItem="rxg-lr-QfJ" secondAttribute="bottom" constant="10" id="aer-lH-AQg"/>
+                    <constraint firstAttribute="trailing" secondItem="rxg-lr-QfJ" secondAttribute="trailing" constant="10" id="eLE-bT-phm"/>
+                    <constraint firstAttribute="trailing" secondItem="AiM-q4-JKa" secondAttribute="trailing" constant="10" id="t9c-ol-Mbe"/>
+                    <constraint firstItem="DWd-DC-Qkj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="tRo-DV-1OL"/>
+                    <constraint firstItem="rxg-lr-QfJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="xNe-4c-CES"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <constraints>
+                <constraint firstItem="DWd-DC-Qkj" firstAttribute="width" secondItem="KGk-i7-Jjw" secondAttribute="width" multiplier="0.35" id="R9s-B9-MaV"/>
+            </constraints>
+            <connections>
+                <outlet property="datePost" destination="AiM-q4-JKa" id="FLn-He-AQC"/>
+                <outlet property="descriptionLB" destination="C2L-fn-SlO" id="x8o-Vy-udi"/>
+                <outlet property="imgNews" destination="DWd-DC-Qkj" id="bWA-gZ-bZs"/>
+                <outlet property="title" destination="rxg-lr-QfJ" id="j7J-fS-iKj"/>
+                <outlet property="viewTotal" destination="H2p-sc-9uM" id="iit-oz-Lh9"/>
+            </connections>
+            <point key="canvasLocation" x="165.21739130434784" y="147.32142857142856"/>
+        </tableViewCell>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dwU-UA-z3o">
+            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" title="Button"/>
+            <point key="canvasLocation" x="-533" y="52"/>
+        </button>
+    </objects>
+    <resources>
+        <image name="hinhtintuc.jpg" width="275" height="183"/>
+    </resources>
+</document>
