@@ -1,7 +1,6 @@
 
 #import "NavigationBottom.h"
 #import "Constains.h"
-#import "DiscoverViewController.h"
 
 @implementation NavigationBottom
 
