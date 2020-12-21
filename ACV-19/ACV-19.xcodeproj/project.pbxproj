@@ -58,6 +58,8 @@
 		430BBCDF246564360011A4A7 /* bookmarks.png in Resources */ = {isa = PBXBuildFile; fileRef = 430BBCC9246564360011A4A7 /* bookmarks.png */; };
 		4313CC332535939B00886D83 /* APIClients.m in Sources */ = {isa = PBXBuildFile; fileRef = 4313CC322535939B00886D83 /* APIClients.m */; };
 		4313CC3725359A2D00886D83 /* icons8-octagon-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 4313CC3625359A2D00886D83 /* icons8-octagon-24.png */; };
+		432236462591126D0040CF7C /* MapTotalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 432236432591126C0040CF7C /* MapTotalViewController.m */; };
+		432236472591126D0040CF7C /* MapTotalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432236442591126C0040CF7C /* MapTotalViewController.xib */; };
 		432BD8D523ED17AD0066F4DE /* Group 831@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 432BD8C623ED17AC0066F4DE /* Group 831@2x.png */; };
 		432BD8D723ED17AD0066F4DE /* Group 832@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 432BD8C723ED17AC0066F4DE /* Group 832@2x.png */; };
 		432BD8D923ED17AD0066F4DE /* Group 829.png in Resources */ = {isa = PBXBuildFile; fileRef = 432BD8C823ED17AC0066F4DE /* Group 829.png */; };
@@ -297,6 +299,9 @@
 		4313CC322535939B00886D83 /* APIClients.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIClients.m; sourceTree = "<group>"; };
 		4313CC352535942100886D83 /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		4313CC3625359A2D00886D83 /* icons8-octagon-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-octagon-24.png"; sourceTree = "<group>"; };
+		432236432591126C0040CF7C /* MapTotalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapTotalViewController.m; path = ShowMapController/TotalMap/MapTotalViewController.m; sourceTree = "<group>"; };
+		432236442591126C0040CF7C /* MapTotalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapTotalViewController.xib; path = ShowMapController/TotalMap/MapTotalViewController.xib; sourceTree = "<group>"; };
+		432236452591126D0040CF7C /* MapTotalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapTotalViewController.h; path = ShowMapController/TotalMap/MapTotalViewController.h; sourceTree = "<group>"; };
 		432BD8C623ED17AC0066F4DE /* Group 831@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 831@2x.png"; sourceTree = "<group>"; };
 		432BD8C723ED17AC0066F4DE /* Group 832@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 832@2x.png"; sourceTree = "<group>"; };
 		432BD8C823ED17AC0066F4DE /* Group 829.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 829.png"; sourceTree = "<group>"; };
@@ -914,6 +919,9 @@
 		43F037FA23CC140300D16CCA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				432236452591126D0040CF7C /* MapTotalViewController.h */,
+				432236432591126C0040CF7C /* MapTotalViewController.m */,
+				432236442591126C0040CF7C /* MapTotalViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1239,6 +1247,7 @@
 				4330549C23D5457A0082B771 /* hai_chau.png in Resources */,
 				43C3CF62257CE3DC00614E88 /* Logo-29@2x.png in Resources */,
 				4338B1E023EAD5D800C3F623 /* Group 818.png in Resources */,
+				432236472591126D0040CF7C /* MapTotalViewController.xib in Resources */,
 				4338B1E223EAD5D800C3F623 /* Group 739@2x.png in Resources */,
 				43CE03F725642154003B6636 /* chinhphu2.png in Resources */,
 				4338B1D823EAD5D800C3F623 /* Group 667@2x.png in Resources */,
@@ -1298,6 +1307,7 @@
 				43D964F823E432D5007DCDD0 /* NavigationBottom.m in Sources */,
 				43C3CF40257CDC1E00614E88 /* SpinnerView.m in Sources */,
 				4343E36624614E5E0010BD4F /* DrawerMenu.m in Sources */,
+				432236462591126D0040CF7C /* MapTotalViewController.m in Sources */,
 				43A041F523CF1F9500DFD949 /* MDScratchImageView.mm in Sources */,
 				43F037E523CC13C900D16CCA /* main.m in Sources */,
 				43C3CF41257CDC1E00614E88 /* Pose.m in Sources */,
