@@ -51,4 +51,25 @@ UIView *coverView;
     [alert show];
 }
 
++ (void)pushNotificationWithID:(NSString*)identifier title:(NSString*)titleText body:(NSString *)bodyText andTimeInterval:(int)timeInterval {
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    
+    UNMutableNotificationContent *content = [UNMutableNotificationContent new];
+    content.title = titleText;
+    content.body = bodyText;
+    content.categoryIdentifier = @"UYLReminderCategory";
+    content.sound = [UNNotificationSound defaultSound];
+    
+    UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:timeInterval repeats:NO];
+    
+    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:identifier content:content trigger:trigger];
+    
+    [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"Something went wrong: %@",error);
+        }
+    }];
+    NSLog(@"Push notification %@", identifier);
+}
+
 @end

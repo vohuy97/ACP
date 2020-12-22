@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <UserNotifications/UserNotifications.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)stopSpinnerLoading;
 + (void)showAlertWithContent:(NSString *)content;
 + (void)showAlertWithContentServerError:(NSString *)content;
++ (void)pushNotificationWithID:(NSString*)identifier title:(NSString*)titleText body:(NSString *)bodyText andTimeInterval:(int)timeInterval;
 @end
 
 NS_ASSUME_NONNULL_END
