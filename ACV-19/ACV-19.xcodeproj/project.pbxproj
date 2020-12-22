@@ -765,10 +765,10 @@
 		4322368425911A1A0040CF7C /* PatientStatisticTotalViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4322368B25911A1A0040CF7C /* PatientStatisticTotalViewController.h */,
 				4322368525911A1A0040CF7C /* PatientStatisticTotalViewController.m */,
 				4322368625911A1A0040CF7C /* PatientStatisticTotalViewController.xib */,
 				4322368725911A1A0040CF7C /* Table */,
-				4322368B25911A1A0040CF7C /* PatientStatisticTotalViewController.h */,
 			);
 			path = PatientStatisticTotalViewController;
 			sourceTree = "<group>";
@@ -1668,7 +1668,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.huypro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1692,7 +1692,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.boxyz.3Mstreaming.mobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -57,7 +57,18 @@
 - (void)viewWillAppear:(BOOL)animated {
     [NavigationTop initNavigationItemsTopWithTitle:@"CPA" leftImageName:@"Icon.png" leftAction:@selector(navigationActionLeft) rightImageName:@"" rightAction:nil atView:self];
 
-    [[AppDelegate sharedInstance] startUpdatingLocation];
+    [self configureLocalNotification];
+}
+
+- (void)configureLocalNotification {
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    UNAuthorizationOptions options = UNAuthorizationOptionAlert + UNAuthorizationOptionSound;
+
+    [center requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[AppDelegate sharedInstance] startUpdatingLocation];
+        });
+    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -82,7 +93,7 @@
     float longtitude= [[AppDelegate sharedInstance]getLongitude];
     CLLocationCoordinate2D position = CLLocationCoordinate2DMake(latitude, longtitude);
     mapView.settings.myLocationButton = NO;
-    [mapView setMinZoom:3 maxZoom:15];
+    [mapView setMinZoom:3 maxZoom:20];
     curentZoom = 5.5;
     mapView.delegate = self;
     [_viewTotal addSubview:mapView];
@@ -280,9 +291,11 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
             for (int i = 0; i < positionArr.count; i ++) {
                 int position = [positionArr[i] intValue];
                 patientName = [NSString stringWithFormat:@"%@ ",[self->data[position] objectForKey:@"name"]];
+                if (![patientName isEqualToString:@"BN-425 "]) {
+                    NSString *content = [NSString stringWithFormat:@"Bạn đang ở gần bệnh nhân %@",patientName];
+                    [self showAlertWithContent:content];
+                }
             }
-            NSString *content = [NSString stringWithFormat:@"Bạn đang ở gần bệnh nhân %@",patientName];
-            [self showAlertWithContent:content];
         }
       NSLog(@"Do some work");
     });

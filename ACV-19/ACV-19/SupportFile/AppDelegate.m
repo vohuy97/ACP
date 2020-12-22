@@ -19,16 +19,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    double delayInSeconds = 1.0;
     [GMSServices provideAPIKey:@"AIzaSyD1hetNrqSJSqW__fLzcxf3RHXHzFDuU_k"];
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    self.MapTotalVC = [[MapTotalViewController alloc] init];
-//    self.daNangMapVC.latitude = 16.030419;
-//    self.daNangMapVC.longtitude = 108.223344;
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:self.MapTotalVC];
-    self.window.rootViewController = nav;
-    [self.window makeKeyAndVisible];
-    
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.MapTotalVC = [[MapTotalViewController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:self.MapTotalVC];
+        self.window.rootViewController = nav;
+        [self.window makeKeyAndVisible];
+        
+    });
+
     return YES;
 }
 
@@ -147,28 +149,36 @@
             NSString *lng = [patientInfo[i] objectForKey:@"lng"];
             CLLocation *patientLocation = [self locationWithlat:lat lng:lng];
             CLLocationDistance distanceBetweenCurrentAndPatient = [mostRecentLocation distanceFromLocation:patientLocation];
-            if (distanceBetweenCurrentAndPatient <= distant) {
+            NSString *patientName;
+            patientName = [NSString stringWithFormat:@"%@ ",[patientInfo[i] objectForKey:@"name"]];
+            if (distanceBetweenCurrentAndPatient <= distant && ![patientName isEqualToString:@"BN-425 "]) {
                 [positionArr addObject:[NSString stringWithFormat:@"%i",i]];
                 showedPopup = NO;
             }
         }
     }
     
-    if (positionArr.count > 0 && ![[NSUserDefaults standardUserDefaults] boolForKey:SHOWED_POPUP]) {
+    BOOL show = [[NSUserDefaults standardUserDefaults] boolForKey:SHOWED_POPUP];
+    if (positionArr.count > 0 && show == NO) {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:SHOWED_POPUP];
         NSString *patientName;
         for (int i = 0; i < positionArr.count; i ++) {
             int position = [positionArr[i] intValue];
             patientName = [NSString stringWithFormat:@"%@ ",[patientInfo[position] objectForKey:@"name"]];
+            
+            if (![patientName isEqualToString:@"BN-425 "]) {
+                NSString *content = [NSString stringWithFormat:@"Bạn đang ở gần bệnh nhân %@",patientName];
+                [Utils showAlertWithContent:content];
+                [Utils pushNotificationWithID:patientName title:@"Cảnh Báo" body:content andTimeInterval:1];
+            }
         }
-        NSString *content = [NSString stringWithFormat:@"Bạn đang ở gần bệnh nhân %@",patientName];
-        [Utils showAlertWithContent:content];
     }
     
     if (showedPopup) {
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:SHOWED_POPUP];
     }
-  NSLog(@"Do some work");
+    
+    NSLog(@"Do some work");
 }
 
 - (CLLocation *)locationWithlat:(NSString *)lat lng:(NSString *)lng {

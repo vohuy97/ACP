@@ -68,7 +68,7 @@
     }
     
     cell.datePost.text = [data[indexPath.row] objectForKey:@"date"];
-    cell.title.text = [data[indexPath.row] objectForKey:@"title"];
+    cell.title.text = [NSString stringWithFormat:@"%@", [data[indexPath.row] objectForKey:@"title"]];
     cell.descriptionLB.text = [data[indexPath.row] objectForKey:@"content"];
     cell.imgNews.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[data[indexPath.row] objectForKey:@"image"]]]];
     UITapGestureRecognizer *singleFingerTap =

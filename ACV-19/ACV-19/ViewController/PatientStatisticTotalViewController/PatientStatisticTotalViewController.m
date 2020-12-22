@@ -75,6 +75,14 @@
     cell.tuoiLb.text = [NSString stringWithFormat:@"%@", [data[indexPath.row] objectForKey:@"age"]];
     cell.diaDiemLb.text = [data[indexPath.row] objectForKey:@"address"];
     cell.tinhTrangLb.text = [data[indexPath.row] objectForKey:@"status"];
+    if ([[data[indexPath.row] objectForKey:@"status"] isEqualToString:@"Khỏi"]) {
+        cell.tinhTrangLb.textColor = [UIColor greenColor];
+    } else if ([[data[indexPath.row] objectForKey:@"status"] isEqualToString:@"Đang điều trị"]) {
+        cell.tinhTrangLb.textColor = [UIColor orangeColor];
+    } else if ([[data[indexPath.row] objectForKey:@"status"] isEqualToString:@"Tử vong"]) {
+        cell.tinhTrangLb.textColor = [UIColor redColor];
+    }
+    
     cell.quocTichLb.text = [data[indexPath.row] objectForKey:@"national"];
 
     return cell;
